@@ -8,6 +8,7 @@ pip = "*"
 flask = "*"
 zappa = "*"
 requests = "*"
+py3dmol = "*"
 
 [dev-packages]
 
