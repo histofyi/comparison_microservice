@@ -7,6 +7,7 @@ name = "pypi"
 pip = "*"
 flask = "*"
 zappa = "*"
+requests = "*"
 
 [dev-packages]
 
