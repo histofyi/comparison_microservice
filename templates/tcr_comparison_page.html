@@ -1,0 +1,167 @@
+{% set nav='alleles' %}
+{% extends "shared/base.html" %}
+
+{% block main %}
+
+{% include "styles.html" %}
+
+<section>
+    <div class="grid-container">
+        <div class="column-full-width">
+            <div class="inner">
+                <small><strong>peptide:MHC/TCR apo vs holo</strong></small>
+                <h1 class="heading-large vertical-spacing-bottom structure-title">Complex title</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="grid-container">
+        <div class="column-full-width">
+            <div class="inner">
+                <h2 class="heading-medium"><strong></strong>1.</strong> Peptide conformation changes</h2>
+            </div>
+        </div>
+        <div class="column-two-thirds">
+            <div><strong>a.</strong> Interactive overlay of apo and holo peptide structures</div>
+            {% if apo_holo_peptide_comparison %}
+                {{apo_holo_peptide_comparison | safe}}
+                
+                <div>Green (APO) vs Yellow (HOLO)</div>
+
+            {% endif %}
+        </div>
+        <div class="column-one-third">
+            <div class="inner">
+                <div>Text description of the comparison.</div>
+                <div><strong>b.</strong>Overlay of the C alpha carbon traces of the apo and holo peptide structures</div>
+                <div><img src="/static/1hhk_vs_1bd2_peptide_calpha.png"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="grid-container">
+        <div class="column-full-width">
+            <hr />
+            <div class="inner">
+                <h3 class="heading-small vertical-spacing-top-0-5 vertical-spacing-bottom-0-5">Deviations between structures (RMSDs)</h3>
+            </div>
+        </div>
+        
+        <div class="column-one-third">
+            <strong>c.</strong> All atom RMSDs
+            <img src="/static/all_atom.png">
+        </div>
+        <div class="column-one-third">
+            <strong>d.</strong> Backbone only RMSDs
+            <img src="/static/backbone.png">
+        </div>
+        <div class="column-one-third">
+            <strong>e.</strong> Side chain RMSDs
+            <img src="/static/sidechain.png">
+        </div>
+    </div>
+</section>
+<section>
+    <div class="grid-container">
+        <div class="column-full-width">
+            <div class="inner">
+                <hr />
+                <h3 class="heading-small heading-small vertical-spacing-top-0-5 vertical-spacing-bottom-0-5">B-factors for apo and holo peptide structures</h3>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="inner">
+                <h4>Apo</h4>
+                <img src="/static/1hhk_peptide_bfactors.png">
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="inner">
+                <h4>Holo</h4>
+                <img src="/static/1bd2_peptide_bfactors.png">
+            </div>
+        </div>
+        <div class="column-one-third">
+            Information
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="grid-container">
+        <div class="column-full-width">
+            <div class="inner">
+                <h2 class="heading-medium">MHC molecule comparisons</h2>
+            </div>
+        </div>
+        <div class="column-two-thirds">
+            APO vs HOLO
+        </div>
+        <div class="column-one-third">
+            <div>
+                Text description of the comparison
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="grid-container">
+        <div class="column-full-width">
+            <div class="inner">
+                <h3 class="heading-small">Deviations between structures (RMSDs)</h3>
+            </div>
+        </div>
+        <div class="column-one-third">
+            All atom
+        </div>
+        <div class="column-one-third">
+            Backbone
+        </div>
+        <div class="column-one-third">
+            Sidechain
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="grid-container">
+        <div class="column-full-width">
+            <div class="inner">
+                <h2 class="heading-medium">T-cell receptor comparisons</h2>
+            </div>
+        </div>
+        <div class="column-two-thirds">
+            APO vs HOLO
+        </div>
+        <div class="column-one-third">
+            <div>
+                Text description of the comparison
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="grid-container">
+        <div class="column-full-width">
+            <div class="inner">
+                <h3 class="heading-small">Deviations between structures (RMSDs)</h3>
+            </div>
+        </div>
+        <div class="column-one-third">
+            All atom
+        </div>
+        <div class="column-one-third">
+            Backbone
+        </div>
+        <div class="column-one-third">
+            Sidechain
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
